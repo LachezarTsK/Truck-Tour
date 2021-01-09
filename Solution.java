@@ -29,7 +29,7 @@ public class Solution {
    * The exception to this order is only when the current index equals the last array index: 
    * then the next station to be visited is that with index zero.
    *
-   * @return A non-negative long integer, if there is an index, as described above. 
+   * @return A non-negative integer, if there is an index, as described above. 
    *         Otherwise, it returns '-1'.    
    */
   public static int search_minStartIndex_toCompleteTruckTour(long[][] stations_litersAndDistanceToNext) {
