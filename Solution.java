@@ -1,4 +1,3 @@
-package truckTour.streamlined;
 
 import java.util.Scanner;
 
@@ -19,30 +18,38 @@ public class Solution {
     }
     scanner.close();
 
-    int minStartIndex_toCompleteTruckTour =
-        search_minStartIndex_toCompleteTruckTour(stations_litersAndDistanceToNext);
+    int minStartIndex_toCompleteTruckTour = search_minStartIndex_toCompleteTruckTour(stations_litersAndDistanceToNext);
     System.out.println(minStartIndex_toCompleteTruckTour);
   }
+
 
   /**
    * The method searches for the minimum starting index, from which the truck can make a complete
    * tour of the petrol stations, i.e. starting index = finishing index, and the next petrol station
    * to be visited is the petrol station with the next index in the array, in increasing order. The
-   * exception to this order is only when the current index equals the last array index: then the
-   * next station to be visited is that with index zero.
+   * exception to this order is only when the current index equals the last array index: 
+   * then the next station to be visited is that with index zero.
    *
-   * @return A non-negative long integer, if there is an index, as described above. Otherwise, it
-   *     returns '-1';
+   *
+   * @return A non-negative long integer, if there is an index, as described above. 
+   *         Otherwise, it returns '-1'.
+   *     
    */
-  public static int search_minStartIndex_toCompleteTruckTour(
-      long[][] stations_litersAndDistanceToNext) {
+  public static int search_minStartIndex_toCompleteTruckTour(long[][] stations_litersAndDistanceToNext) {
+      
 
-    // Counts number of starting indexes. Implemented to avoid infinite loop, when complete tour is
-    // not
-    // possible from any index.
-    int totalStarts = stations_litersAndDistanceToNext.length;
-    int index = 0;
+      /**
+       *  Counts number of starting indexes. Implemented to avoid infinite loop, 
+       *  when complete tour is not possible from any index.
+       */
+       int totalStarts = stations_litersAndDistanceToNext.length;
+       int index = 0;
 
+
+      
+    
+    
+    
     while (totalStarts > 0) {
 
       int start = index;
@@ -59,10 +66,10 @@ public class Solution {
           break;
         }
 
-        litersInTruck =
-            litersInTruck
-                + stations_litersAndDistanceToNext[index][0]
-                - stations_litersAndDistanceToNext[index][1];
+        litersInTruck += ations_litersAndDistanceToNext[index][0]- stations_litersAndDistanceToNext[index][1];
+            
+                
+                
       }
 
       if (completeTour) {
